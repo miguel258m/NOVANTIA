@@ -1,0 +1,594 @@
+/* Novantia — hoja de estilos compartida */
+
+:root {
+  --green: #0E9F6E;
+  --green-dark: #0B7A56;
+  --green-darker: #075C41;
+  --green-light: #E6F6EF;
+  --ink: #0F172A;
+  --ink-soft: #475569;
+  --ink-faint: #94A3B8;
+  --bg: #FFFFFF;
+  --bg-alt: #F6FAF8;
+  --danger: #E11D48;
+  --border: #E2E8F0;
+  --radius: 18px;
+  --radius-sm: 12px;
+  --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  --shadow-sm: 0 4px 14px rgba(15, 23, 42, 0.06);
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  line-height: 1.15;
+  margin: 0 0 .5em;
+  color: var(--ink);
+}
+
+p { margin: 0 0 1em; color: var(--ink-soft); }
+
+a { color: inherit; text-decoration: none; }
+
+img, svg { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.logo img { height: 30px; width: auto; }
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.main-nav a {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.main-nav a:hover, .main-nav a.active { color: var(--green-dark); }
+
+.nav-toggle { display: none; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+  white-space: nowrap;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  background: var(--green);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover { background: var(--green-dark); box-shadow: var(--shadow); }
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--ink);
+}
+
+.btn-outline:hover { border-color: var(--green); color: var(--green-dark); }
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+
+.btn-whatsapp:hover { background: #1EBE59; }
+
+.btn-block { width: 100%; }
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 72px 0 56px;
+  background: linear-gradient(180deg, var(--bg-alt) 0%, #fff 100%);
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green-light);
+  color: var(--green-darker);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 4.4vw, 52px);
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+.hero h1 .accent { color: var(--green); }
+
+.hero .lead {
+  font-size: 18px;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.hero-art {
+  background: var(--ink);
+  border-radius: 24px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.hero-art .mark {
+  width: 140px;
+  height: 140px;
+  border: 5px solid var(--green);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.hero-art::before {
+  content: "";
+  position: absolute;
+  inset: -40% -20% auto auto;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(14,159,110,.35), transparent 70%);
+}
+
+/* ---------- Benefit strip ---------- */
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: -28px;
+  position: relative;
+  z-index: 2;
+}
+
+.benefit-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 18px 16px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.benefit-card .ico {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--green-light);
+  color: var(--green-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-card strong { display: block; font-size: 14.5px; color: var(--ink); }
+
+/* ---------- Section shell ---------- */
+
+section { padding: 72px 0; }
+
+.section-alt { background: var(--bg-alt); }
+
+.section-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 40px;
+}
+
+.section-head .kicker {
+  color: var(--green-dark);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section-head h2 { font-size: clamp(26px, 3.4vw, 36px); }
+
+/* ---------- Pain points ---------- */
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.pain-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px 18px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.pain-card .x {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #FEE2E2;
+  color: var(--danger);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.pain-card p { margin: 0; color: var(--ink); font-size: 15px; }
+
+.pain-resolve {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+/* ---------- Service cards ---------- */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--green);
+}
+
+.service-card .ico {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--green-light);
+  color: var(--green-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card h3 { font-size: 20px; }
+
+.service-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+}
+
+.service-card ul li { margin-bottom: 4px; }
+
+.service-card .go {
+  margin-top: auto;
+  font-weight: 600;
+  color: var(--green-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.also-line {
+  text-align: center;
+  margin-top: 26px;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+}
+
+/* ---------- Steps ---------- */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  counter-reset: step;
+}
+
+.step-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+}
+
+.step-num {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.step-card h3 { font-size: 17px; margin-bottom: 6px; }
+.step-card p { font-size: 14.5px; margin: 0; }
+
+/* ---------- Commitment ---------- */
+
+.commit-box {
+  background: var(--ink);
+  border-radius: 24px;
+  padding: 44px 36px;
+  color: #fff;
+}
+
+.commit-box h2 { color: #fff; text-align: center; margin-bottom: 30px; }
+
+.commit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 32px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.commit-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 15px;
+  color: #E2E8F0;
+}
+
+.commit-item .check {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- CTA WhatsApp ---------- */
+
+.cta-band {
+  background: linear-gradient(120deg, var(--green-dark), var(--green));
+  border-radius: 24px;
+  padding: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.cta-band h2 { color: #fff; font-size: 24px; margin-bottom: 6px; }
+.cta-band p { color: rgba(255,255,255,.9); margin: 0; }
+
+.cta-whatsapp-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.cta-whatsapp-card .wa-ico {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Related services ---------- */
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.related-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: border-color .15s ease, transform .15s ease;
+}
+
+.related-card:hover { border-color: var(--green); transform: translateY(-2px); }
+.related-card strong { display: block; font-size: 15.5px; }
+.related-card span { color: var(--ink-soft); font-size: 13.5px; }
+
+/* ---------- Footer ---------- */
+
+footer {
+  background: var(--ink);
+  color: #CBD5E1;
+  padding: 44px 0 26px;
+}
+
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+footer .logo img { filter: brightness(0) invert(1); }
+
+footer .foot-links { display: flex; gap: 22px; flex-wrap: wrap; }
+footer .foot-links a { color: #CBD5E1; font-size: 14px; }
+footer .foot-links a:hover { color: #fff; }
+
+.foot-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  margin-top: 26px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #94A3B8;
+}
+
+/* ---------- Floating WhatsApp button ---------- */
+
+.wa-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 60;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(37,211,102,.5);
+  transition: transform .15s ease;
+}
+
+.wa-float:hover { transform: scale(1.08); }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero-art { min-height: 240px; order: -1; }
+  .benefits { grid-template-columns: repeat(2, 1fr); margin-top: 28px; }
+  .pain-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .commit-grid { grid-template-columns: 1fr; }
+  .related-grid { grid-template-columns: 1fr; }
+  .main-nav { display: none; }
+}
+
+@media (max-width: 560px) {
+  .benefits { grid-template-columns: 1fr; }
+  .pain-grid { grid-template-columns: 1fr; }
+  .cta-band { flex-direction: column; align-items: flex-start; }
+  .commit-box { padding: 30px 20px; }
+}

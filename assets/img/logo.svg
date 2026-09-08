@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" role="img" aria-labelledby="novantiaLogoTitle">
+  <title id="novantiaLogoTitle">Novantia</title>
+  <g transform="translate(4,4)">
+    <polygon points="36,2 66,19 66,53 36,70 6,53 6,19" fill="none" stroke="#0E9F6E" stroke-width="5" stroke-linejoin="round"/>
+    <text x="36" y="47" text-anchor="middle" font-family="'Poppins', 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="30" fill="#0E9F6E">N</text>
+  </g>
+  <text x="88" y="47" font-family="'Poppins', 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="30" letter-spacing="1" fill="#0F172A">NOVANTIA</text>
+</svg>
