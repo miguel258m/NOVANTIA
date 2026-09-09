@@ -38,30 +38,16 @@
       </div>
     </div>
     <div class="hero-art">
-      <div class="hero-scene">
-        <div class="phone-mock">
-          <div class="p-head">
-            <span class="ava">N</span>
-            <div><strong>Novantia Bot</strong><span>en línea</span></div>
-          </div>
-          <div class="p-body">
-            <div class="bubble in">Hola! ¿Tienen delivery hoy?</div>
-            <div class="bubble out">¡Sí! Te paso el menú al toque 🍔</div>
-            <div class="bubble in">Quiero 2 hamburguesas</div>
-            <div class="bubble out typing"><span></span><span></span><span></span></div>
-          </div>
-          <div class="p-input">Escribe un mensaje…</div>
-        </div>
-        <div class="float-card card-automation">
-          <div class="flow-nodes"><span class="node"></span><span class="node"></span><span class="node"></span></div>
-          <strong>Automatización activa</strong>
-          <span>3 flujos corriendo</span>
-        </div>
-        <div class="float-card card-chart">
-          <div class="mini-bars"><span style="height:40%"></span><span style="height:65%"></span><span style="height:50%"></span><span style="height:88%"></span></div>
-          <strong>Ventas del mes</strong>
-          <span class="up">▲ +34%</span>
-        </div>
+      <!-- FOTO REAL AQUÍ — reemplazar este .image-slot por:
+           <div class="hero-image"><img src="assets/img/home/hero-negocio.jpg" alt="Dueño/a de un negocio revisando en su celular los pedidos que su bot de Novantia responde solo" width="620" height="775" loading="eager"></div>
+           Spec: retrato 4:5 (~1200×1500px), jpg/webp optimizado, <200kb.
+           Brief: dueño/a de un negocio real (tienda, restaurante, delivery) con su
+           celular en mano, expresión de alivio/satisfacción genuina, luz natural,
+           ambiente auténtico. Evitar: robots 3D, renders de IA, stock genérico. -->
+      <div class="image-slot" style="aspect-ratio:4/5">
+        <svg class="image-slot-ico" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.6"/><path d="m3 16 5-5 4 4 3-3 6 6"/></svg>
+        <strong>Foto real del negocio</strong>
+        <span>Dueño/a con su celular, luz natural — sin robots ni stock genérico</span>
       </div>
     </div>
   </div>
@@ -109,6 +95,44 @@
       <div class="pain-card"><span class="x">✕</span><p>Pierdes clientes porque nadie contesta a tiempo</p></div>
     </div>
     <p class="pain-resolve">Todo eso se puede automatizar. Aquí te muestro cómo. ↓</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Casos reales</span>
+      <h2>Negocios que ya dejaron de perder clientes</h2>
+    </div>
+    <div class="proof-grid">
+      <figure class="proof-item">
+        <!-- FOTO/CAPTURA REAL: chat de WhatsApp de un cliente real usando el bot, o foto del local -->
+        <div class="image-slot" style="aspect-ratio:4/3">
+          <svg class="image-slot-ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.6"/><path d="m3 16 5-5 4 4 3-3 6 6"/></svg>
+          <strong>Foto o captura real</strong>
+          <span>Chat de WhatsApp del bot en acción, o foto del negocio</span>
+        </div>
+        <figcaption><strong>[Resultado real]</strong><span>Ej. "+34% en pedidos" — Restaurante, bot de WhatsApp</span></figcaption>
+      </figure>
+      <figure class="proof-item">
+        <!-- FOTO/CAPTURA REAL: flujo automatizado corriendo, o foto del equipo trabajando -->
+        <div class="image-slot" style="aspect-ratio:4/3">
+          <svg class="image-slot-ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.6"/><path d="m3 16 5-5 4 4 3-3 6 6"/></svg>
+          <strong>Foto o captura real</strong>
+          <span>Flujo automatizado corriendo, o el equipo trabajando</span>
+        </div>
+        <figcaption><strong>[Resultado real]</strong><span>Ej. "12 horas/semana ahorradas" — Automatización de reportes</span></figcaption>
+      </figure>
+      <figure class="proof-item">
+        <!-- FOTO/CAPTURA REAL: sistema en uso en almacén o tienda, con dueño/equipo -->
+        <div class="image-slot" style="aspect-ratio:4/3">
+          <svg class="image-slot-ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.6"/><path d="m3 16 5-5 4 4 3-3 6 6"/></svg>
+          <strong>Foto o captura real</strong>
+          <span>Sistema en uso en almacén o tienda, con dueño o equipo</span>
+        </div>
+        <figcaption><strong>[Resultado real]</strong><span>Ej. "0 errores de inventario" — Sistema a medida</span></figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -169,21 +193,27 @@
       <span class="kicker">Cómo trabajamos</span>
       <h2>Un proceso simple, sin sorpresas</h2>
     </div>
-    <div class="steps">
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <h3>Diagnóstico gratis</h3>
-        <p>Conversamos 20 minutos, entiendo tu proceso actual y te digo qué se puede automatizar de verdad.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <h3>Propuesta clara</h3>
-        <p>Te envío alcance, precio y plazo por escrito antes de empezar. Sin costos sorpresa a mitad de camino.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <h3>Entrega y soporte</h3>
-        <p>Te lo dejo funcionando, te capacito para usarlo y te acompaño después de la entrega.</p>
+    <div class="steps-photo">
+      <ol class="steps-list">
+        <li>
+          <div class="step-num">1</div>
+          <div><h3>Diagnóstico gratis</h3><p>Conversamos 20 minutos, entiendo tu proceso actual y te digo qué se puede automatizar de verdad.</p></div>
+        </li>
+        <li>
+          <div class="step-num">2</div>
+          <div><h3>Propuesta clara</h3><p>Te envío alcance, precio y plazo por escrito antes de empezar. Sin costos sorpresa a mitad de camino.</p></div>
+        </li>
+        <li>
+          <div class="step-num">3</div>
+          <div><h3>Entrega y soporte</h3><p>Te lo dejo funcionando, te capacito para usarlo y te acompaño después de la entrega.</p></div>
+        </li>
+      </ol>
+      <!-- FOTO REAL AQUÍ: reunión de diagnóstico (videollamada) o capacitación con un cliente real.
+           Spec: retrato 4:5 (~1000×1250px). -->
+      <div class="image-slot" style="aspect-ratio:4/5">
+        <svg class="image-slot-ico" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.6"/><path d="m3 16 5-5 4 4 3-3 6 6"/></svg>
+        <strong>Foto real del proceso</strong>
+        <span>Diagnóstico, entrega o capacitación con un cliente real</span>
       </div>
     </div>
   </div>

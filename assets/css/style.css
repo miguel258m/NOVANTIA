@@ -520,6 +520,75 @@ img, svg { max-width: 100%; display: block; }
   box-shadow: var(--shadow);
 }
 
+/* ---------- Image slot: hueco guiado a la espera de una foto real ----------
+   Uso: <div class="image-slot" style="aspect-ratio:4/5">...</div>
+   Cuando llegue la foto real, se reemplaza el contenido interno por
+   <img src="..." alt="..." width="…" height="…" loading="lazy"> y listo,
+   el contenedor ya tiene el tamaño y el radio/sombra correctos. */
+
+.image-slot {
+  border: 2px dashed rgba(15, 23, 42, .16);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 28px;
+  text-align: center;
+  color: var(--ink-soft);
+  width: 100%;
+  min-height: 200px;
+}
+
+.image-slot-ico { width: 30px; height: 30px; color: var(--accent-dark); flex: none; }
+.image-slot strong { color: var(--ink); font-size: 14px; }
+.image-slot span { font-size: 12.5px; max-width: 28ch; }
+
+.hero-art .image-slot {
+  border-color: rgba(255,255,255,.28);
+  background: rgba(255,255,255,.04);
+  color: rgba(255,255,255,.72);
+}
+.hero-art .image-slot strong { color: #fff; }
+.hero-art .image-slot-ico { color: #fff; }
+
+/* ---------- Casos reales: prueba social con fotos (Inicio) ---------- */
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.proof-item figcaption { margin: 14px 0 0; }
+.proof-item figcaption strong { display: block; font-size: 17px; color: var(--ink); }
+.proof-item figcaption span { font-size: 13px; color: var(--ink-soft); }
+
+/* ---------- Pasos + foto (evita repetir 3 veces el mismo grid de tarjetas) ---------- */
+
+.steps-photo {
+  display: grid;
+  grid-template-columns: 1fr .82fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.steps-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.steps-list li { display: flex; gap: 18px; align-items: flex-start; }
+.steps-list .step-num { flex: none; margin-bottom: 0; }
+.steps-list h3 { font-size: 17px; margin-bottom: 4px; }
+.steps-list p { font-size: 14.5px; margin: 0; }
+
 /* ---------- Benefit strip ---------- */
 
 .benefits {
@@ -955,6 +1024,8 @@ footer .foot-links a:hover { color: #fff; }
   .pain-grid { grid-template-columns: repeat(2, 1fr); }
   .service-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
+  .steps-photo { grid-template-columns: 1fr; gap: 32px; }
+  .proof-grid { grid-template-columns: 1fr; }
   .commit-grid { grid-template-columns: 1fr; }
   .related-grid { grid-template-columns: 1fr; }
   .main-nav { display: none; }
